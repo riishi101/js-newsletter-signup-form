@@ -1,0 +1,258 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+:root {
+  --fnts: "Roboto", sans-serif;
+
+  --tmtClr: hsl(4, 100%, 67%);
+  --drkSltGry: hsl(234, 29%, 20%);
+  --chrGry: hsl(235, 18%, 26%);
+  --gryClr: hsl(231, 7%, 60%);
+  --whtClr: hsl(0, 0%, 100%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--drkSltGry);
+  font-family: var(--fnts);
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+}
+
+.card {
+  display: flex;
+  background-color: var(--whtClr);
+  font-family: var(--fnts);
+  border-radius: 18px;
+
+  padding: 1.5rem;
+  width: 780px;
+
+  visibility: visible;
+}
+
+.right_container {
+  width: 60%;
+  padding: 2rem;
+}
+
+.right_container h1 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin: 0;
+}
+
+.icon_container {
+  padding-left: 0;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.icon_container p {
+  display: flex;
+  flex-direction: row;
+  column-gap: 0.8rem;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 0;
+  padding-bottom: 10px;
+}
+
+.popup_container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  background-color: var(--whtClr);
+  width: 400px;
+  padding: 2rem 2.5rem 2rem 2.5rem;
+  border-radius: 25px;
+
+  box-shadow: 0px 2px 15px #333;
+
+  visibility: hidden;
+}
+
+.popup_container h1 {
+  margin-bottom: 0;
+  font-weight: 900;
+  line-height: 2.5rem;
+  font-size: 40px;
+}
+
+.popup_container p {
+  font-size: 13px;
+  margin-bottom: 0;
+  font-weight: 500;
+  color: #333;
+  line-height: 1.2rem;
+}
+
+span {
+  font-weight: 900;
+}
+
+.popup_container img {
+  height: 40px;
+}
+
+.popup_container button {
+  width: 100%;
+  margin-top: 1.5rem;
+}
+
+.left_container {
+  width: 40%;
+}
+
+.left_container img {
+  width: 100%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+label {
+  margin-bottom: 10px;
+  color: #333;
+  font-size: small;
+  font-weight: 700;
+}
+input {
+  padding: 10px 20px;
+  font-family: inherit;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid hsl(231, 7%, 60%);
+
+  cursor: pointer;
+}
+
+.signupForm.success input {
+  border: 1px solid #333;
+}
+
+.signupForm.error input {
+  border: 1px solid var(--tmtClr);
+  background-color: hsla(4, 89%, 50%, 0.151);
+}
+
+.input_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+small {
+  font-size: 10px;
+  letter-spacing: 0.5px;
+  color: var(--tmtClr);
+  font-weight: 800;
+
+  visibility: hidden;
+}
+
+.signupForm.error small {
+  visibility: visible;
+}
+
+button {
+  font-family: inherit;
+  margin-top: 20px;
+  padding: 15px 20px;
+  border: none;
+  outline: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: hsl(235, 18%, 26%);
+}
+button:hover {
+  background-color: hsl(4, 100%, 67%);
+}
+
+footer {
+  margin-top: 2rem;
+  color: #fff;
+}
+
+footer a {
+  text-decoration: none;
+  color: var(--tmtClr);
+}
+
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column-reverse;
+    width: 95%;
+    padding: 0;
+  }
+
+  body {
+    padding: 0;
+    margin: 0;
+  }
+
+  .card h1 {
+    font-size: 30px;
+  }
+
+  .right_container {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .left_container {
+    width: 100%;
+  }
+
+  .left_container img {
+    content: url(./images/illustration-sign-up-mobile.svg);
+  }
+
+  .form {
+    width: 90%;
+  }
+
+  footer {
+    font-size: 12px;
+  }
+
+  .popup_container {
+    min-height: 100vh;
+  }
+
+  .signupForm.success input {
+    border-color: rgba(128, 128, 128, 0.5);
+  }
+
+  .signupForm.error input {
+    border-color: var(--tmtClr);
+  }
+
+  small {
+    font-size: 10px;
+    letter-spacing: 0.5px;
+    color: var(--tmtClr);
+    font-weight: 800;
+
+    visibility: hidden;
+  }
+
+  .signupForm.error small {
+    visibility: visible;
+  }
+}
